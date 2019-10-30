@@ -13,5 +13,10 @@ RSpec.describe "fizzbuzz" do
          expect(fizzbuzz(6)).not_to eq "Buzz"
       end 
    end
-   
+   context "when divisable by both 5 & 3" do
+      it "should return 'FizzBuzz'" do
+        expect(fizzbuzz(15)).to eq "FizzBuzz"
+        expect(fizzbuzz(11)).not_to eq "FizzBuzz"
+      end
+   end
 end
